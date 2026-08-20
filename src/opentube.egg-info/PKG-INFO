@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: opentube
+Version: 1.0.0
+Summary: A free, open-source desktop media downloader built with Python, PySide6, yt-dlp, and FFmpeg.
+License: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PySide6>=6.5.0
+Requires-Dist: yt-dlp>=2023.10.13
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Requires-Dist: mypy>=1.5.0; extra == "dev"
+Requires-Dist: pytest-qt>=4.2.0; extra == "dev"
+Requires-Dist: pyinstaller>=6.0.0; extra == "dev"
+Dynamic: license-file
+
+# OpenTube
+
+A free, open-source desktop media downloader built with Python, PySide6, yt-dlp, and FFmpeg.
+
+## Features
+- Clean, modern, professional desktop UI
+- Download publicly accessible media using yt-dlp
+- Format selection (MP4 Video, MP3 Audio) with varying qualities
+- Asynchronous downloads with progress tracking
+- Robust error handling and clean subprocess management
+
+## Requirements
+- Python 3.10+
+- FFmpeg available in the system PATH (for merging and audio extraction)
+
+## Development Setup
+```bash
+python -m venv venv
+venv\Scripts\activate
+pip install -e .[dev]
+```
+
+## Running Locally
+```bash
+python -m src.opentube
+```
+
+## License
+MIT License

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opentube"
+version = "1.0.0"
+description = "A free, open-source desktop media downloader built with Python, PySide6, yt-dlp, and FFmpeg."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT License" }
+dependencies = [
+    "PySide6>=6.5.0",
+    "yt-dlp>=2023.10.13",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.5.0",
+    "pytest-qt>=4.2.0",
+    "pyinstaller>=6.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+strict = true
